@@ -11,9 +11,6 @@ abstract final class AssetImages {
   static const String hadithMainBackground = '${base}hadith_main_bg.png';
   static const String quranBottomImage = '${base}quran_bottom_image.png';
   static const String hadithCardBg = '${base}hadith_card_bg.png';
-  static const String sebha = '${base}sebha (2).png';
-  static const String sebhaBody = '${base}SebhaBody 1.png';
-  static const String tasbihBackGround = '${base}tasbih_background.png';
 }
 
 abstract final class SvgAssets {
@@ -30,6 +27,4 @@ abstract final class SvgAssets {
   static const String selectedTasbehIcon = '${base}selected_tasbeh_icon.svg';
   static const String selectedHadithIcon = '${base}selected_hadith_icon.svg';
   static const String quranSearchIcon = '${base}quran_search_icon.svg';
-
-
 }
