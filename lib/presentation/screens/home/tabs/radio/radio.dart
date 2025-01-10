@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_c13_offline/core/resources/assets_manager.dart';
+import 'package:islami_c13_offline/presentation/screens/home/tabs/radio/Clicked_Radio.dart';
 
 class RadioTab extends StatelessWidget {
   const RadioTab({super.key});
@@ -17,55 +18,161 @@ class RadioTab extends StatelessWidget {
             child: Container(
           color: Colors.black.withOpacity(0.8),
         )),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Image.asset(AssetImages.islamiLogo),
-            Padding(
-              padding: const EdgeInsets.only(left: 20,right: 20),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      width: double.infinity,
-                      height: 40,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: Color(0xffE2BE7F)),
-                      child: Center(
-                        child: Text(
-                          'Radio',
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16),
-                        ),
-                      ),
-                    ),
+        Column(children: [
+        ClickedRadio(),
+        SizedBox(height: 20,),
+        Container(
+          padding: EdgeInsets.only(top: 15),
+          decoration: BoxDecoration(
+              color: Color(0xffE2BE7F),
+              borderRadius: BorderRadius.circular(20)),
+          width: double.infinity,
+          margin: EdgeInsets.only(left: 20, right: 20),
+          height: 125,
+          child: Stack(
+            alignment: AlignmentDirectional.center,
+            children: [
+                Image.asset(AssetImages.MosqueDark)
+                ,Align(
+                alignment: Alignment.topCenter,
+                  child: Text(
+                    'Radio Ibrahim Al-Akdar',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        color: Colors.black),
+
                   ),
-                  Expanded(
-                    child: Container(
-                      width: double.infinity,
-                      height: 40,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12),
-                        color: Color(0xff202020B2)),
-                        child: Center(
-                          child: Text(
-                          'Reciters',
-                          style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 16),
-                          ),
-                        ),
-                        ),
-                  )],
+                ),
+              Padding(
+                padding: const EdgeInsets.only(top: 40),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                  Image.asset(AssetImages.Play),
+                  SizedBox(width: 20,),
+                  Image.asset(AssetImages.volumeHigh),
+                ],),
+              )
+
+            ],
+          ),
+        ),
+          SizedBox(height: 20,),
+          Container(
+            padding: EdgeInsets.only(top: 15),
+            decoration: BoxDecoration(
+                color: Color(0xffE2BE7F),
+                borderRadius: BorderRadius.circular(20)),
+            width: double.infinity,
+            margin: EdgeInsets.only(left: 20, right: 20),
+            height: 125,
+            child: Stack(
+              alignment: AlignmentDirectional.center,
+              children: [
+                Image.asset(AssetImages.soundWaves)
+                ,Align(
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                    'Radio Ibrahim Al-Akdar',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        color: Colors.black),
+
                   ),
-            )
-            ,
-          ],
-        )
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(AssetImages.Pause),
+                      SizedBox(width: 20,),
+                      Image.asset(AssetImages.VolumeOff),
+                    ],),
+                )
+
+              ],
+            ),
+          ),
+          SizedBox(height: 20,),
+          Container(
+            padding: EdgeInsets.only(top: 15),
+            decoration: BoxDecoration(
+                color: Color(0xffE2BE7F),
+                borderRadius: BorderRadius.circular(20)),
+            width: double.infinity,
+            margin: EdgeInsets.only(left: 20, right: 20),
+            height: 125,
+            child: Stack(
+              alignment: AlignmentDirectional.center,
+              children: [
+                Image.asset(AssetImages.MosqueDark)
+                ,Align(
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                    'Radio Ibrahim Al-Akdar',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        color: Colors.black),
+
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(AssetImages.Play),
+                      SizedBox(width: 20,),
+                      Image.asset(AssetImages.volumeHigh),
+                    ],),
+                )
+
+              ],
+            ),
+          ),
+          SizedBox(height: 20,),
+          Container(
+            padding: EdgeInsets.only(top: 15),
+            decoration: BoxDecoration(
+                color: Color(0xffE2BE7F),
+                borderRadius: BorderRadius.circular(20)),
+            width: double.infinity,
+            margin: EdgeInsets.only(left: 20, right: 20),
+            height: 125,
+            child: Stack(
+              alignment: AlignmentDirectional.center,
+              children: [
+                Image.asset(AssetImages.MosqueDark)
+                ,Align(
+                  alignment: Alignment.topCenter,
+                  child: Text(
+                    'Radio Ibrahim Al-Akdar',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 20,
+                        color: Colors.black),
+
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(AssetImages.Play),
+                      SizedBox(width: 20,),
+                      Image.asset(AssetImages.volumeHigh),
+                    ],),
+                )
+
+              ],
+            ),
+          ),
+        ],),
       ],
     );
   }
