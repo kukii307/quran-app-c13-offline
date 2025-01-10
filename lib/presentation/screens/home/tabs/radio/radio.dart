@@ -19,8 +19,8 @@ class RadioTab extends StatelessWidget {
           color: Colors.black.withOpacity(0.8),
         )),
         Column(children: [
-        ClickedRadio(),
-        SizedBox(height: 20,),
+        const ClickedRadio(),
+        const SizedBox(height: 20,),
         Container(
           padding: EdgeInsets.only(top: 15),
           decoration: BoxDecoration(
@@ -58,20 +58,20 @@ class RadioTab extends StatelessWidget {
             ],
           ),
         ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Container(
-            padding: EdgeInsets.only(top: 15),
+            padding: const EdgeInsets.only(top: 15),
             decoration: BoxDecoration(
-                color: Color(0xffE2BE7F),
+                color: const Color(0xffE2BE7F),
                 borderRadius: BorderRadius.circular(20)),
             width: double.infinity,
-            margin: EdgeInsets.only(left: 20, right: 20),
+            margin: const EdgeInsets.only(left: 20, right: 20),
             height: 125,
             child: Stack(
               alignment: AlignmentDirectional.center,
               children: [
                 Image.asset(AssetImages.soundWaves)
-                ,Align(
+                ,const Align(
                   alignment: Alignment.topCenter,
                   child: Text(
                     'Radio Ibrahim Al-Akdar',
@@ -96,7 +96,7 @@ class RadioTab extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Container(
             padding: EdgeInsets.only(top: 15),
             decoration: BoxDecoration(
@@ -134,7 +134,7 @@ class RadioTab extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20,),
+          const SizedBox(height: 20,),
           Container(
             padding: EdgeInsets.only(top: 15),
             decoration: BoxDecoration(
