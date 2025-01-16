@@ -41,7 +41,7 @@ class _TasbehTabState extends State<TasbehTab> {
       children: [
         Positioned.fill(
             child: Image.asset(
-          AssetImages.tasbihBackGround,
+          AssetImages.tasbihBackground,
           fit: BoxFit.cover,
         )),
         Positioned.fill(

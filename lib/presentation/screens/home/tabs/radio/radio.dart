@@ -49,7 +49,7 @@ class RadioTab extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                  Image.asset(AssetImages.Play),
+                  Image.asset(AssetImages.play),
                   SizedBox(width: 20,),
                   Image.asset(AssetImages.volumeHigh),
                 ],),
@@ -125,7 +125,7 @@ class RadioTab extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset(AssetImages.Play),
+                      Image.asset(AssetImages.play),
                       SizedBox(width: 20,),
                       Image.asset(AssetImages.volumeHigh),
                     ],),
@@ -163,7 +163,7 @@ class RadioTab extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset(AssetImages.Play),
+                      Image.asset(AssetImages.play),
                       SizedBox(width: 20,),
                       Image.asset(AssetImages.volumeHigh),
                     ],),
