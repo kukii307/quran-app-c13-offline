@@ -1,5 +1,5 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
-
 import '../../../../../core/resources/assets_manager.dart';
 
 class TasbehTab extends StatefulWidget {
@@ -12,6 +12,7 @@ class TasbehTab extends StatefulWidget {
 class _TasbehTabState extends State<TasbehTab> {
   int counter = 0;
   int index = 0;
+  double rotationAngle = 0.0; // Add a variable to track the rotation angle
 
   List<String> tasbihList = [
     'سبحان الله',
@@ -26,13 +27,15 @@ class _TasbehTabState extends State<TasbehTab> {
     if (counter < 30) {
       setState(() {
         counter++;
+        rotationAngle += pi / 4; // Increment the rotation angle
       });
-    } else  {
+    } else {
       setState(() {
         counter = 0;
         index = (index + 1) % tasbihList.length;
+        rotationAngle += pi / 4; // Increment the rotation angle
       });
-    };
+    }
   }
 
   @override
@@ -40,64 +43,75 @@ class _TasbehTabState extends State<TasbehTab> {
     return Stack(
       children: [
         Positioned.fill(
-            child: Image.asset(
-          AssetImages.tasbihBackground,
-          fit: BoxFit.cover,
-        )),
+          child: Image.asset(
+            AssetImages.tasbihBackground,
+            fit: BoxFit.cover,
+          ),
+        ),
         Positioned.fill(
-            child: Container(
-          color: Colors.black.withOpacity(0.8),
-        )),
+          child: Container(
+            color: Colors.black.withOpacity(0.8),
+          ),
+        ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Expanded(child: Image.asset(AssetImages.islamiLogo)),
             const Expanded(
-                child: Center(
-                    child: Text(
-              'سَبِّحِ اسْمَ رَبِّكَ الأعلى ',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 36,
-                  fontWeight: FontWeight.w700),
-            ))),
+              child: Center(
+                child: Text(
+                  'سَبِّحِ اسْمَ رَبِّكَ الأعلى ',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 36,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+            ),
             Stack(
               alignment: AlignmentDirectional.center,
               children: [
                 Positioned(
-                    top: 0.5,
-                    child: Image.asset(
-                      AssetImages.sebha,
-                    )),
-                Image.asset(AssetImages.sebhaBody),
+                  top: 0.5,
+                  child: Image.asset(
+                    AssetImages.sebha,
+                  ),
+                ),
+                Transform.rotate(
+                  angle: rotationAngle,
+                  child: Image.asset(AssetImages.sebhaBody),
+                ),
+
                 InkWell(
-                  onTap: () {
-                    tasbihCount();
-                  },
+                  onTap: tasbihCount,
                   child: Column(
                     children: [
                       Text(
                         '${tasbihList[index]}',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 36,
-                            fontWeight: FontWeight.w700),
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 36,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                       Text(
                         '$counter',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 36,
-                            fontWeight: FontWeight.w700),
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 36,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ],
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ],
     );
   }
 }
+
